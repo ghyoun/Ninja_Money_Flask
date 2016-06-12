@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px 15px 5px 20px;
+}
+
+    #tracker {
+        margin-bottom: 15px;
+    }
+
+        #tracker h3 {
+            display:inline-block;
+        }
+
+        #tracker #goldDisplay {
+            width: 120px;
+            border: 1px solid black;
+            margin-left: 10px;
+            padding-left: 6px;
+        }
+
+        #tracker form {
+            display: inline-block;
+        }
+
+            #tracker input {
+                padding: 5px;
+            }
+
+    #make_money {
+        margin-bottom: 15px;
+        width: 100%;
+        height: 200px;
+    }
+
+        .job {
+            border: 1px solid black;
+            padding: 15px;
+            width: 19.5%;
+            display: inline-block;
+            text-align: center;
+            height: 170px;
+            margin-right: 1%;
+            vertical-align: top;
+        }
+
+            .job h1 {
+                margin-bottom: 10px;
+            }
+
+            .job h3 {
+                margin-bottom: 20px;
+            }
+
+            .job input {
+                padding: 7px;
+                border: 2px solid black;
+                font-size: 14pt;
+            }
+
+            #casino {
+                margin-right: 0% !important;
+            }
+
+            #house h3 {
+                padding-bottom: 22px;
+            }
+
+    #activity {
+        background-color: white;
+        width: 100%;
+        height: 100px;
+        border: 1px solid black;
+        overflow: auto;
+    }
+
+    .earn {
+        color: green;
+    }
+
+    .lost {
+        color: red;
+    }

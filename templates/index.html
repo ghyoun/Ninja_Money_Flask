@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ninja Money</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/index.css")}}">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="tracker">
+            <h3>Your Gold: </h3>
+            <h3 id="goldDisplay">{{gold}}</h3>
+            <form action="/clear" method="POST">
+                <input type="submit" name="submit" value="Reset Gold">
+            </form>
+        </div>
+        <div id='make_money'>
+            <div class='job' id="farm">
+                <h1>Farm</h1>
+                <h3>(earns 10-20 golds)</h3>
+                <form action='/process_money' method="post">
+                    <input type="hidden" name="hidden" value='farm'>
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class='job' id="cave">
+                <h1>Cave</h1>
+                <h3>(earns 5-10 golds)</h3>
+                <form action='/process_money' method="post">
+                    <input type="hidden" name="hidden" value='cave'>
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class='job' id="house">
+                <h1>House</h1>
+                <h3>(earns 2-5 golds)</h3>
+                <form action='/process_money' method="post">
+                    <input type="hidden" name="hidden" value='house'>
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+            <div class='job' id="casino">
+                <h1>Casino</h1>
+                <h3>(earns/takes 0-50 golds)</h3>
+                <form action='/process_money' method="post">
+                    <input type="hidden" name="hidden" value='casino'>
+                    <input type="submit" value="Find Gold!">
+                </form>
+            </div>
+        </div>
+
+        <h3>Activities: </h3>
+        <div id="activity">
+            {% if activity %}
+                {% for type, message in activity %}
+                <p class={{type}}>{{message}}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
